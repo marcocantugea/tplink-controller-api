@@ -16,3 +16,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/configuration/{idclient}','ConfigurationController@GetConfigurationClient');
+$router->post('/configuration/{idclient}','ConfigurationController@AddConfigurationClient');
+$router->put('/configuration/{idclient}','ConfigurationController@UpdateConfigurationClient');
+$router->delete('/configuration/{idclient}','ConfigurationController@DeleteConfigurationClient');
